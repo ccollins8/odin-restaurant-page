@@ -1,1 +1,1 @@
-console.log("hello!");
+(()=>{console.log("hello!");const e=document.querySelector("#content"),o=document.createElement("div");o.classList.add("header"),e.appendChild(o)})();
