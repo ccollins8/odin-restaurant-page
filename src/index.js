@@ -1,7 +1,8 @@
-console.log("hello!")
 
-const content = document.querySelector('#content');
+import loadPage from "./initial-page-load";
 
-const header = document.createElement('div');
-header.classList.add('header')
-content.appendChild(header);
+loadPage()
+
+
+
+
