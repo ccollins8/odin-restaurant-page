@@ -1,3 +1,5 @@
+import loadHome from "./home";
+
 function loadPage() {
     const content = document.querySelector('#content');
 
@@ -28,19 +30,17 @@ function loadPage() {
     main.classList.add('main');
     content.appendChild(main)
 
-    let p = document.createElement('p');
-    p.textContent = "Quality you can taste";
-    main.appendChild(p)
+    loadHome()
 
-    p = document.createElement('p');
-    p.textContent = "Made with love since 1918";
-    main.appendChild(p);
+    // Footer
 
-    const image = document.createElement('img');
-    image.setAttribute('src','')
+    const footer = document.createElement('div');
+    footer.classList.add('footer');
+    content.appendChild(footer)
 
-
-
+    let h3 = document.createElement('h3');
+    h3.textContent = "Created by Corey Collins"
+    footer.appendChild(h3)
 
 }
 
