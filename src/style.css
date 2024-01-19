@@ -1,19 +1,20 @@
 :root {
-    --background-dark: rgba(0, 0, 0, 0.9);
+    --background-dark: rgba(0, 0, 0, 0.8);
+    --background-light: rgba(0, 0, 0, 0.6);
 }
 
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    
+    color: white;
 }
 
 #content {
     height: 100%;
     display: grid;
-    grid-template-rows: 10% 90%;
-    color: white;
+    grid-template-rows: 10% 85% 5%;
+    
     background: url('images/background.jpg');
     background-size: cover;
 }
@@ -46,10 +47,18 @@ html, body {
     color: white;
 }
 
+/* Main */
+
 .main {
-    
+    text-align: center;
+    font-size: 4rem;
 }
 
+/* Footer */
+
 .footer {
-    background-color: var(--background-dark);
+    background-color: var(--background-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
