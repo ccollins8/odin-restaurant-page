@@ -1,3 +1,5 @@
+// import Background from './images/background.jpg';
+
 function loadHome() {
 
     // const home = document.createElement('div')

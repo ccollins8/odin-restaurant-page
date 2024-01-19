@@ -1,11 +1,21 @@
+:root {
+    --background-dark: rgba(0, 0, 0, 0.9);
+}
+
 html, body {
     height: 100%;
+    margin: 0;
+    padding: 0;
+    
 }
 
 #content {
     height: 100%;
     display: grid;
     grid-template-rows: 10% 90%;
+    color: white;
+    background: url('images/background.jpg');
+    background-size: cover;
 }
 
 /* Header */
@@ -14,7 +24,8 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: aqua;
+    background-color: var(--background-dark);
+    
 }
 
 .header h1 {
@@ -25,14 +36,20 @@ html, body {
     display: flex;
     align-items: center;
     gap: 3rem;
+    
 }
 
 .header .nav button {
     background: none;
     border: none;
     font-size: 1.5rem;
+    color: white;
 }
 
 .main {
-    background: url()
+    
+}
+
+.footer {
+    background-color: var(--background-dark);
 }
