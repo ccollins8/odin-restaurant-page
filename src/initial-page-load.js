@@ -20,6 +20,7 @@ function loadPage() {
     const navItems = ['Home', 'Menu', 'Contact'];
     navItems.forEach((element) => {
         const item = document.createElement('button');
+        item.id = element.toLowerCase()
         item.textContent = element;
         nav.appendChild(item)
     });
