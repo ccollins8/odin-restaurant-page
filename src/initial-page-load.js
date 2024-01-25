@@ -31,6 +31,10 @@ function loadPage() {
     main.classList.add('main');
     content.appendChild(main)
 
+    const container = document.createElement('div');
+    container.classList.add('container')
+    main.appendChild(container)
+
     loadHome()
 
     // Footer
