@@ -18,6 +18,7 @@ function loadHome() {
 
     const image = document.createElement('img');
     image.src = 'pizza-chef.jpg'
+    image.id = 'chef'
     container.appendChild(image)
 
     p = document.createElement('p');

@@ -74,7 +74,7 @@ html, body {
     padding: 1rem;
 }
 
-.main img {
+.main #chef {
     content: url('images/pizza-chef.jpg');
     max-width: 70%;
 }
