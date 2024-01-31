@@ -2,10 +2,10 @@
 
 function loadHome() {
 
-    // const home = document.createElement('div')
-    // home.classList.add('home')
-
     const container = document.querySelector('.container')
+    container.id = 'home';
+
+    container.innerHTML = "";
 
 
     let p = document.createElement('p');

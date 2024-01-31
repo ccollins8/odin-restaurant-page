@@ -1,7 +1,10 @@
-import cheese from "./images/cheese.jpg"
+import cheese from "./images/cheese.jpg";
+import pepperoniPizza from "./images/pepperoni-pizza.jpg";
+import supremePizza from "./images/supreme-pizza.jpg"
 
 function loadMenu() {
     const container = document.querySelector('.main .container');
+    container.id = 'menu';
 
     container.innerHTML = "";
 
@@ -16,8 +19,7 @@ function loadMenu() {
         constructor(name, toppings, image) {
             this.name = name;
             this.toppings = 'Cheese, ' + toppings;
-            this.image = new Image();
-            this.image.src = image;
+            this.image = image
         }
 
     }
@@ -35,10 +37,14 @@ function loadMenu() {
         cheese);
     pizzas.push(cheesePizza);
 
-    let pepperoni = new menuItem("Pepperoni", "Peppernoni, Maranara sauce, and cheese")
+    let pepperoni = new menuItem("Pepperoni", 
+    "Peppernoni, Maranara sauce, and cheese",
+    pepperoniPizza)
     pizzas.push(pepperoni)
 
-    let supreme = new menuItem("Supreme", "Italien sausage, marinara sauce, and cheese")
+    let supreme = new menuItem("Supreme",
+    "Italien sausage, marinara sauce, and cheese",
+    supremePizza)
     pizzas.push(supreme)
 
     pizzas.forEach((pizza) => {
@@ -47,6 +53,8 @@ function loadMenu() {
         container.appendChild(card);
 
         const image = document.createElement('img');
+        image.src = pizza.image
+        image.classList.add('pizza')
         card.appendChild(image)
 
         const name = document.createElement('h3');
