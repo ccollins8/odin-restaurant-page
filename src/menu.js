@@ -1,4 +1,4 @@
-import cheese from "./images/cheese.jpg";
+import cheesePizza from "./images/cheese.jpg";
 import pepperoniPizza from "./images/pepperoni-pizza.jpg";
 import supremePizza from "./images/supreme-pizza.jpg"
 
@@ -16,9 +16,9 @@ function loadMenu() {
 
     class menuItem {
 
-        constructor(name, toppings, image) {
+        constructor(name, description, image) {
             this.name = name;
-            this.toppings = 'Cheese, ' + toppings;
+            this.description = description;
             this.image = image
         }
 
@@ -31,21 +31,28 @@ function loadMenu() {
     // pizzas.push(cheese)
 
     // Create a Cheese pizza object with image
-    const cheesePizza = new menuItem(
+    const cheese = new menuItem(
         "Cheese", 
-        "Marinara sauce", 
-        cheese);
-    pizzas.push(cheesePizza);
+        "Made with cheese and tomato sauce", 
+        cheesePizza);
+    pizzas.push(cheese);
 
     let pepperoni = new menuItem("Pepperoni", 
-    "Peppernoni, Maranara sauce, and cheese",
+    "Made with cheese, tomato sauce, and pepperoni",
     pepperoniPizza)
     pizzas.push(pepperoni)
 
     let supreme = new menuItem("Supreme",
-    "Italien sausage, marinara sauce, and cheese",
+    "Made with cheese, tomato sauce, pepperoni, sausage, beef, mushrooms, green bell peppers, and onions",
     supremePizza)
     pizzas.push(supreme)
+
+    let sausage = new menuItem("Sausage",
+    "Made with cheese, tomato sauce, and sausage",
+    supremePizza)
+    pizzas.push(sausage)
+
+    
 
     pizzas.forEach((pizza) => {
         const card = document.createElement('div');
@@ -62,7 +69,7 @@ function loadMenu() {
         card.appendChild(name);
 
         const description = document.createElement('p');
-        description.textContent = pizza.toppings
+        description.textContent = pizza.description
         card.appendChild(description)
     })
     

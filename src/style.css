@@ -3,7 +3,7 @@
     --background-light: rgba(0, 0, 0, 0.6);
 }
 
-html, body {
+body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -12,9 +12,11 @@ html, body {
 }
 
 #content {
+    display: flex;
+    flex-direction: column;
     height: 100%;
-    display: grid;
-    grid-template-rows: 10% 85% 5%;
+    /* display: grid;
+    grid-template-rows: 10% 85% 5%; */
     
     background: url('images/background.jpg');
     background-size: cover;
@@ -47,6 +49,12 @@ html, body {
     font-size: 1.5rem;
     color: white;
     font-family: sans-serif;
+    padding: 0.5rem;
+}
+
+.header .nav button:hover {
+    cursor: pointer;
+    border-bottom: solid white 1px;  ;
 }
 
 /* Main */
@@ -67,6 +75,7 @@ html, body {
     align-items: center;
     justify-content: center;
     max-width: 600px;
+    margin: 4rem;
 }
 
 .main .container > * {
@@ -82,28 +91,28 @@ html, body {
 
 /* Menu */
 
-#menu {
+.main #menu {
     padding: 2rem;
 }
 
 
-#menu * {
+.main #menu * {
     padding: 0;
     margin: 0;
 }
 
-#menu .card {
+.main #menu .card {
     background-color: var(--background-light);
     border-radius: 1rem;
     display: grid;
     align-items: center;
-    grid-template: 1fr 1fr / 1fr 3fr;
+    grid-template: 1fr 2fr / 1fr 3fr;
     margin: 1rem;
     padding: 1rem;
     gap: 0.5rem 1rem;
 }
 
-#menu img {
+.main #menu img {
     grid-row: 1 / 3;
     height: 100px;
     width: 150px;
@@ -111,19 +120,23 @@ html, body {
     align-self: center;
 }
 
-#menu h3 {
+.main #menu h3 {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     align-self: flex-end;
 }
 
-#menu p {
+.main #menu p {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     align-self: flex-start;
 }
 
+/* Contact */
 
+.main #contact {
+    padding: 1rem 2rem 2rem 2rem;
+}
 
 
 /* Footer */
